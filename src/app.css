@@ -1,7 +1,7 @@
 @import './styles/typography.css';
 
 :root {
-  font-family: var(--font-primary);
+  font-family: var(--font-primary), sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -13,6 +13,11 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  /* disable on touch highlights of html elements, especially on mobile! */
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none; /* Safari */
+  user-select: none;
 }
 
 a {
@@ -31,6 +36,8 @@ body {
   min-width: 320px;
   min-height: 100vh;
   background-color: #242424;
+  overflow: hidden; /* disable scrolling / rubberband effect on mobile */
+
 }
 
 h1 {
